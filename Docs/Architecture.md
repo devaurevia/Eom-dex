@@ -26,7 +26,7 @@ This document outlines the high-level architecture of **EOM DEX**, a next-genera
 
 ## 2) System Flow
 
-```mermaid
+
 flowchart TD
     U[User Wallet] --> F[Frontend dApp]
     F --> B[Backend Engine]
@@ -40,7 +40,6 @@ flowchart TD
     E --> X
     X --> U
 
-```markdown
 Explanation
 
 1. User places an order via the dApp.
