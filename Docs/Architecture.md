@@ -69,7 +69,9 @@ Safety Controls: Daily/weekly caps, circuit breakers, and allowlisted withdrawal
 5) Cross-Chain Design
 
 Phase 1: Ethereum, BNB Chain, Solana, BTC (wrapped). Router optimizes intra-chain routes.
+
 Phase 2: Integration with new L1/L2 via adaptor modules, optional third-party bridges.
+
 Phase 3: Unified aggregator auto-routing between EOM orderbook, external DEX aggregators, and CEX.
 
 ---
@@ -77,9 +79,12 @@ Phase 3: Unified aggregator auto-routing between EOM orderbook, external DEX agg
 6) Fees & Pricing
 
 Platform fee: 0.35%, configurable via governance.
+
 Maker/Taker model: e.g., 0.10% / 0.25%.
 Referral program: rewards from platform fee.
+
 OTC large trades: lower negotiated fee path.
+
 Best execution: Router evaluates total effective cost (fees + gas + slippage).
 
 ---
@@ -87,9 +92,13 @@ Best execution: Router evaluates total effective cost (fees + gas + slippage).
 7) Security & Risk Controls
 
 Audits: Minimum one independent auditor before launch.
+
 Upgradability: Proxy with time-lock and multi-sig.
+
 Monitoring: Alerts for abnormal spread, unlock spikes, or suspicious drains.
+
 Rate Limiting: Per-user API and transaction throttling.
+
 Fail-safes: Market pause and global emergency stop (without freezing user funds).
 
 ---
