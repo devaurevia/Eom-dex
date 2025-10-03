@@ -26,19 +26,15 @@ This document outlines the high-level architecture of **EOM DEX**, a next-genera
 
 ## 2) System Flow
 
+| Step | Component            | Action                                    |
+|------|----------------------|-------------------------------------------|
+| 1    | User Wallet          | Sends order to frontend                   |
+| 2    | Frontend dApp        | Forwards request to backend engine        |
+| 3    | Backend Engine       | Calls Quote Service & Router              |
+| 4    | Router               | Chooses path (Orderbook / DEX / Escrow)   |
+| 5    | Contracts            | Executes via OrderBook.sol / EscrowVault  |
+| 6    | Settlement           | Final on-chain settlement                 |
 
-flowchart TD
-    U[User Wallet] --> F[Frontend dApp]
-    F --> B[Backend Engine]
-    B --> Q[Quote Service]
-    B --> R[Cross-chain Router]
-    B --> C[OrderBook Contract]
-    B --> E[EscrowVault Contract]
-    R --> C
-    R --> D[External DEX/CEX]
-    C --> X[On-chain Settlement]
-    E --> X
-    X --> U
 
 Explanation
 
